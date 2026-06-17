@@ -2,53 +2,50 @@
    AXIO Apps Global Stylesheet - Modern Light Tech / SaaS Theme
    ========================================================================== */
 
+
 /* --- Custom Properties / Design Tokens --- */
+
 :root {
     /* Color Palette */
     --bg-main: #ffffff;
     --bg-secondary: #f8fafc;
     /* Slate 50 */
     --bg-card: #ffffff;
-
     --color-blue-primary: #2563eb;
     --color-blue-light: #0284c7;
     /* Darker cyan for light background readability */
     --color-blue-dark: #1e3a8a;
     --color-blue-glow: rgba(37, 99, 235, 0.06);
-
     --color-orange-primary: #ea580c;
     /* Darker orange for readability */
     --color-orange-light: #f97316;
     --color-orange-dark: #9a3412;
     --color-orange-glow: rgba(234, 88, 12, 0.06);
-
     --border-glass: rgba(15, 23, 42, 0.08);
     --border-glass-active: rgba(37, 99, 235, 0.25);
-
     --text-primary: #0f172a;
     /* Slate 900 */
     --text-secondary: #475569;
     /* Slate 600 */
     --text-muted: #64748b;
     /* Slate 500 */
-
     /* Typography */
     --font-headings: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
     /* Spacing & Borders */
     --border-radius-sm: 8px;
     --border-radius-md: 16px;
     --border-radius-lg: 24px;
     --max-width: 1200px;
-
     /* Transition Defaults */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+
 /* --- Base & Reset --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -69,7 +66,9 @@ body {
     position: relative;
 }
 
+
 /* --- Ambient Glowing Accents --- */
+
 .glow-accent {
     position: absolute;
     width: 600px;
@@ -94,7 +93,9 @@ body {
     background: radial-gradient(circle, var(--color-orange-primary), transparent 70%);
 }
 
+
 /* --- Layout Utilities --- */
+
 .container {
     width: 100%;
     max-width: var(--max-width);
@@ -120,7 +121,9 @@ section {
     position: relative;
 }
 
+
 /* --- Typography Styles --- */
+
 h1,
 h2,
 h3,
@@ -151,7 +154,9 @@ h6 {
     color: var(--color-blue-primary) !important;
 }
 
+
 /* Gradient Text */
+
 .gradient-text-blue {
     background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-blue-primary) 100%);
     -webkit-background-clip: text;
@@ -166,7 +171,9 @@ h6 {
     background-clip: text;
 }
 
+
 /* --- Buttons & UI Elements --- */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -214,7 +221,9 @@ h6 {
     border-radius: var(--border-radius-md);
 }
 
+
 /* Badge */
+
 .badge-container {
     margin-bottom: 20px;
 }
@@ -234,7 +243,9 @@ h6 {
     letter-spacing: 1px;
 }
 
+
 /* --- Section Title Header --- */
+
 .section-header {
     text-align: center;
     max-width: 700px;
@@ -269,7 +280,9 @@ h6 {
     }
 }
 
+
 /* --- Glassmorphic Header / Navbar --- */
+
 .header {
     position: fixed;
     top: 0;
@@ -318,7 +331,7 @@ h6 {
     font-family: var(--font-headings);
     font-weight: 800;
     font-size: 1.4rem;
-    color: var(--text-primary);
+    color: var(--bg-main);
     letter-spacing: -0.5px;
 }
 
@@ -368,7 +381,9 @@ h6 {
     align-items: center;
 }
 
+
 /* Mobile Toggle Hamburger */
+
 .mobile-nav-toggle {
     display: flex;
     flex-direction: column;
@@ -393,13 +408,14 @@ h6 {
     .nav-menu {
         display: block;
     }
-
     .mobile-nav-toggle {
         display: none;
     }
 }
 
+
 /* Mobile Navigation Drawer */
+
 @media (max-width: 991px) {
     .nav-menu {
         position: fixed;
@@ -419,35 +435,31 @@ h6 {
         transition: var(--transition-normal);
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
     }
-
     .nav-menu.active {
         right: 0;
     }
-
     .nav-list {
         flex-direction: column;
         align-items: center;
         gap: 40px;
     }
-
     .nav-link {
         font-size: 1.2rem;
     }
-
     .mobile-nav-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-
     .mobile-nav-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
-
     .mobile-nav-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
 
+
 /* --- Hero Section --- */
+
 .hero-section {
     padding-top: 160px;
     padding-bottom: 80px;
@@ -503,7 +515,9 @@ h6 {
     gap: 8px;
 }
 
+
 /* Hero Visual Graphics */
+
 .hero-visual {
     display: flex;
     justify-content: center;
@@ -549,7 +563,9 @@ h6 {
     animation: pulse-glow 6s infinite ease-in-out;
 }
 
+
 /* Floating Badges */
+
 .floating-tech-card {
     position: absolute;
     background: rgba(255, 255, 255, 0.85);
@@ -606,7 +622,9 @@ h6 {
     animation: float 6s infinite ease-in-out 3s;
 }
 
+
 /* --- About Section --- */
+
 .about-section {
     background-color: var(--bg-secondary);
     border-top: 1px solid var(--border-glass);
@@ -660,7 +678,9 @@ h6 {
     line-height: 1.5;
 }
 
+
 /* --- Services Section --- */
+
 .services-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -699,7 +719,9 @@ h6 {
     box-shadow: 0 20px 40px rgba(37, 99, 235, 0.06);
 }
 
+
 /* Card Radial Hover Light */
+
 .service-card-glow {
     position: absolute;
     top: 0;
@@ -763,7 +785,9 @@ h6 {
     margin-bottom: 0;
 }
 
+
 /* Customize colors for elements */
+
 .service-card:nth-child(2) .service-icon {
     color: var(--color-orange-primary);
 }
@@ -780,7 +804,9 @@ h6 {
     box-shadow: 0 20px 40px rgba(234, 88, 12, 0.06);
 }
 
+
 /* --- CEO Section --- */
+
 .ceo-section {
     background-color: var(--bg-secondary);
     border-top: 1px solid var(--border-glass);
@@ -807,7 +833,6 @@ h6 {
     min-height: 550px;
     /* ← KEY FIX */
 }
-
 
 .ceo-frame-glow {
     position: absolute;
@@ -925,7 +950,9 @@ h6 {
     padding-left: 10%;
 }
 
+
 /* --- Contact Section --- */
+
 .contact-section {
     overflow: hidden;
 }
@@ -974,7 +1001,9 @@ h6 {
     color: var(--text-muted);
 }
 
+
 /* --- Footer (Dark anchoring) --- */
+
 .footer {
     background-color: #0b0f19;
     /* Anchored with premium dark midnight blue */
@@ -1091,7 +1120,9 @@ h6 {
     color: #64748b;
 }
 
+
 /* --- Persistent Floating WhatsApp Widget --- */
+
 .whatsapp-floating {
     position: fixed;
     bottom: 30px;
@@ -1154,7 +1185,9 @@ h6 {
     transform: translateX(0);
 }
 
+
 /* --- Scroll Animation Reveals --- */
+
 .scroll-reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -1174,21 +1207,20 @@ h6 {
     transition-delay: 0.3s;
 }
 
-/* --- Keyframe Animations --- */
-@keyframes float {
 
+/* --- Keyframe Animations --- */
+
+@keyframes float {
     0%,
     100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-15px);
     }
 }
 
 @keyframes ping {
-
     75%,
     100% {
         transform: scale(1.6);
@@ -1200,22 +1232,53 @@ h6 {
     0% {
         filter: drop-shadow(0 4px 10px rgba(37, 99, 235, 0.12));
     }
-
     100% {
         filter: drop-shadow(0 4px 24px rgba(37, 99, 235, 0.28));
     }
 }
 
 @keyframes pulse-glow {
-
     0%,
     100% {
         transform: scale(0.9);
         opacity: 0.05;
     }
-
     50% {
         transform: scale(1.1);
         opacity: 0.12;
     }
+}
+
+.full-width-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 70px;
+}
+
+.full-width {
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+}
+
+.full-width .section-title {
+    margin: 20px 0;
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+.full-width .quote-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #5c667a;
+    font-style: italic;
+}
+
+.full-width .section-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ff5b1f;
+    font-weight: 700;
 }
