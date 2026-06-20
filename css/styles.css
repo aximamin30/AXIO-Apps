@@ -331,6 +331,13 @@ h6 {
     font-family: var(--font-headings);
     font-weight: 800;
     font-size: 1.4rem;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+.logo-text-foter {
+    font-family: var(--font-headings);
+    font-weight: 800;
+    font-size: 1.4rem;
     color: var(--bg-main);
     letter-spacing: -0.5px;
 }
